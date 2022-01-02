@@ -1,0 +1,18 @@
+header{
+    & nav{
+        @apply bg-primary-color py-2 md:py-4
+    }
+    & ul {
+        @apply hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0;
+        & li {
+            & a {
+                &.call-to-action{
+                    /*
+                    test
+                    */
+                    @apply mx-2  #{!important};
+                }
+            }
+        }
+    }
+}

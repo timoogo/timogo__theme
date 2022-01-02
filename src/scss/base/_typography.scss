@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Futura";
+    src: url("../../fonts/Futura.ttc") format('ttc');
+}
+h1, h2, h3,h4, h5, h6, p, span, li, a {
+    font-family: "Futura" !important;
+}
+h1{
+    @apply text-6xl uppercase font-bold;
+    color: white;
+}

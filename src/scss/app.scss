@@ -1,0 +1,16 @@
+
+@import "base/reset";
+
+@import "tailwindcss/base", 
+        "tailwindcss/components",
+        "tailwindcss/utilities";
+
+@import "base/variables",
+        "base/_typography.scss";
+
+@import "components/links",
+        "components/header", 
+        "components/container",
+        "components/hero",
+        "components/progress";
+

@@ -1,0 +1,10 @@
+.hero{
+    &.text {
+        @apply flex flex-col items-center w-full md:flex-row md:w-1/2;
+    
+        p{
+            @apply mt-12 text-white leading-6;
+        }
+    
+    }
+}
