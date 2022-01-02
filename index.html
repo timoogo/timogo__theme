@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./dist/css/app.css">
 </head>
@@ -35,7 +35,7 @@
 
     </header>
     
-    <main>
+    <section data-name="hero" data-is_filled="true">
         <div class="hero text">
             <div class="max-w-lg md:mx-12 md:order-2">
                 <h1>Enjoy your work</h1>
@@ -45,18 +45,19 @@
                 </div>
             </div>
         </div>
-        <div class="flex items-center justify-center w-full h-full md:w-1/2">
+        <div class="flex image">
             <img class="object-cover w-full h-full max-w-2xl rounded-md" src="./src/images/hero.png" alt="developper drinking coffee flat design">
         </div>
+        <!-- PROGRESS -->
         <div class="progress">
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-          <button></button>
-          <button id="current-position"></button>
-            <button></button>
+          <button data-section-name="A" id="current-position"></button>
+          <button data-section-name="B"></button>
+          <button data-section-name="C"></button>
+          <button data-section-name="D"></button>
+        
           </div>
+        </section>
+        <section id="test" data-is_filled="false"></section>
     </main>
  
 

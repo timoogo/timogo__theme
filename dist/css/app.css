@@ -734,34 +734,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
   --tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
 .static {
   position: static;
 }
@@ -798,9 +770,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .items-center {
   align-items: center;
-}
-.justify-center {
-  justify-content: center;
 }
 .justify-between {
   justify-content: space-between;
@@ -940,9 +909,8 @@ a.current {
 }
 a.current:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  color: var(--primary-color);
 }
 @media (min-width: 768px) {
   a.current {
@@ -1036,48 +1004,52 @@ header ul li a.call-to-action {
   margin-right: 0.5rem !important;
 }
 
-.container {
+section[data-is_filled] {
   background-color: var(--primary-color);
+}
+section[data-is_filled][data-name=hero] {
   margin-left: auto;
   margin-right: auto;
   display: flex;
   width: 100%;
   flex-direction: column;
 }
-
-.container > :not([hidden]) ~ :not([hidden]) {
+section[data-is_filled][data-name=hero] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
-
-.container {
+section[data-is_filled][data-name=hero] {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
 @media (min-width: 768px) {
-  .container {
+  section[data-is_filled][data-name=hero] {
     height: 100%;
   }
-  .container {
+  section[data-is_filled][data-name=hero] {
     flex-direction: row;
   }
-  .container {
+  section[data-is_filled][data-name=hero] {
     align-items: center;
   }
-  .container > :not([hidden]) ~ :not([hidden]) {
+  section[data-is_filled][data-name=hero] > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
-  .container {
+  section[data-is_filled][data-name=hero] {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
 }
 
-.hero.half {
+#test {
+  height: 100vh;
+  background-color: white;
+}
+
+section[data-name=hero].text {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -1085,18 +1057,30 @@ header ul li a.call-to-action {
 }
 
 @media (min-width: 768px) {
-  .hero.half {
+  section[data-name=hero].text {
     width: 50%;
   }
-  .hero.half {
+  section[data-name=hero].text {
     flex-direction: row;
   }
 }
-.hero.half p {
+section[data-name=hero] p {
   margin-top: 3rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+section[data-name=hero].image {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  section[data-name=hero].image {
+    width: 50%;
+  }
 }
 
 .progress {
@@ -1116,7 +1100,6 @@ header ul li a.call-to-action {
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  background-color: var(--primary-color);
 }
 .progress button:hover {
   --tw-bg-opacity: 1;
@@ -1169,9 +1152,6 @@ header ul li a.call-to-action {
   }
   .md\:hidden {
     display: none;
-  }
-  .md\:w-1\/2 {
-    width: 50%;
   }
   .md\:items-center {
     align-items: center;

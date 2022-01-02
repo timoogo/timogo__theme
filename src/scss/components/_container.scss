@@ -1,4 +1,11 @@
-main {
+section[data-is_filled] {
     background-color: var(--primary-color);
-    @apply flex flex-col py-4 mx-auto space-y-12 md:h-full md:py-16 md:flex-row md:items-center md:space-x-6 w-full;
+    &[data-name="hero"]{
+        @apply flex flex-col py-4 mx-auto space-y-12 md:h-full md:py-16 md:flex-row md:items-center md:space-x-6 w-full;
+    }
+
+}
+#test{
+    height: 100vh;
+    background-color: white;
 }
