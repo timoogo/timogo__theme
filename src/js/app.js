@@ -1,10 +1,9 @@
 console.log('hello mix');
 
-let section_list = document.querySelectorAll('section'); // returns NodeList
-let section_array = [...section_list]; // converts NodeList to Array
-section_array.forEach(section => {
-    section.addEventListener('click', bg())
-});
-function bg(){
-    this.dataset.is_filled = this.dataset.is_filled == "true" ? "false" : true;
+let count = document.querySelector('[data-section_colored]');
+let allCounts = document.querySelectorAll('[data-section_colored]');
+
+// Check if an element has a data attribute
+if (count.matches('[data-section_colored]')) {
+	console.log('We have a match!');
 }

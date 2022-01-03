@@ -838,7 +838,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-filter);
 }
 :root {
-  --primary-color: #7B61FF;
+  --primary-color: #60a5fa;
   --secondary-color: #fff ;
 }
 
@@ -1100,6 +1100,9 @@ section[data-name=hero].image {
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  opacity: 0.5;
 }
 .progress button:hover {
   --tw-bg-opacity: 1;
@@ -1116,19 +1119,12 @@ section[data-name=hero].image {
   }
 }
 .progress #current-position {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  height: 2rem;
-  width: 2rem;
   border-radius: 9999px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.progress #current-position:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  opacity: 1;
 }
 @media (min-width: 768px) {
   .progress #current-position {
