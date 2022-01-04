@@ -858,6 +858,75 @@ h1 {
   color: white;
 }
 
+h2 {
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+aside[data-vertical=true] {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  -webkit-text-orientation: mixed;
+          text-orientation: mixed;
+  display: flex;
+  height: 100%;
+  width: 15vw;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.services article {
+  max-width: 30vw;
+  margin: 1rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  box-sizing: border-box;
+  box-shadow: 0px 12px 24px rgba(137, 130, 130, 0.17);
+}
+.services article header {
+  position: relative;
+}
+.services article header img {
+  position: relative;
+  min-width: 330px;
+  width: 100%;
+  max-height: 220px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  top: 0;
+  left: 0;
+}
+.services article h2 {
+  position: absolute;
+  right: -0.75rem;
+  bottom: 50%;
+  border-radius: 0.375rem;
+  background-color: var(--primary-color);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.services article p {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 5rem;
+}
+
 a {
   border-radius: 0.25rem;
   padding: 0.5rem;
@@ -1004,44 +1073,57 @@ header ul li a.call-to-action {
   margin-right: 0.5rem !important;
 }
 
-section[data-is_filled] {
+section[data-is_filled=true] {
   background-color: var(--primary-color);
 }
-section[data-is_filled][data-name=hero] {
+section[data-is_filled=true][data-name=hero] {
   margin-left: auto;
   margin-right: auto;
   display: flex;
   width: 100%;
   flex-direction: column;
 }
-section[data-is_filled][data-name=hero] > :not([hidden]) ~ :not([hidden]) {
+section[data-is_filled=true][data-name=hero] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
-section[data-is_filled][data-name=hero] {
+section[data-is_filled=true][data-name=hero] {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
-  section[data-is_filled][data-name=hero] {
+  section[data-is_filled=true][data-name=hero] {
     height: 100%;
   }
-  section[data-is_filled][data-name=hero] {
+  section[data-is_filled=true][data-name=hero] {
     flex-direction: row;
   }
-  section[data-is_filled][data-name=hero] {
+  section[data-is_filled=true][data-name=hero] {
     align-items: center;
   }
-  section[data-is_filled][data-name=hero] > :not([hidden]) ~ :not([hidden]) {
+  section[data-is_filled=true][data-name=hero] > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
-  section[data-is_filled][data-name=hero] {
+  section[data-is_filled=true][data-name=hero] {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+}
+
+[data-name=our-services] {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+[data-name=our-services] .progress {
+  height: 100% !important;
+  justify-content: center;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
 }
 
 #test {
@@ -1091,7 +1173,7 @@ section[data-name=hero].image {
   align-items: center;
   justify-content: space-evenly;
 }
-.progress button {
+.progress[data-section_colored=true] button {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   height: 0.75rem;
@@ -1104,21 +1186,21 @@ section[data-name=hero].image {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   opacity: 0.5;
 }
-.progress button:hover {
+.progress[data-section_colored=true] button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
-.progress button:focus {
+.progress[data-section_colored=true] button:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 @media (min-width: 768px) {
-  .progress button {
+  .progress[data-section_colored=true] button {
     margin-left: 0px;
     margin-right: 0px;
   }
 }
-.progress #current-position {
+.progress[data-section_colored=true] button#current-position {
   border-radius: 9999px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -1127,7 +1209,46 @@ section[data-name=hero].image {
   opacity: 1;
 }
 @media (min-width: 768px) {
-  .progress #current-position {
+  .progress[data-section_colored=true] button#current-position {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+.progress[data-section_colored=false] button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  opacity: 0.5;
+}
+.progress[data-section_colored=false] button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+.progress[data-section_colored=false] button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+@media (min-width: 768px) {
+  .progress[data-section_colored=false] button {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+.progress[data-section_colored=false] button#current-position {
+  border-radius: 9999px;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .progress[data-section_colored=false] button#current-position {
     margin-left: 0px;
     margin-right: 0px;
   }

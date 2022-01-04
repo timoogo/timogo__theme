@@ -1,10 +1,23 @@
-section[data-is_filled] {
+section[data-is_filled=true] {
+    /// SET THE BACKGROUND COLOR TO THE PRIMARY COLOR 
     background-color: var(--primary-color);
+    /// APPLYING THE STYLES FOR THE FIRST SECTION. ITS NAMED HERO
     &[data-name="hero"]{
         @apply flex flex-col py-4 mx-auto space-y-12 md:h-full md:py-16 md:flex-row md:items-center md:space-x-6 w-full;
     }
 
+
 }
+[data-name="our-services"]{
+    ///temporaire
+      height: 100vh;
+      @apply flex flex-row justify-between;
+      & .progress {
+          height: 100% !important;
+          justify-content: center;
+        @apply my-12 #{!important};
+        }
+  }
 #test{
     height: 100vh;
     background-color: white;

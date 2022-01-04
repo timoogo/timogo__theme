@@ -10,6 +10,10 @@ module.exports = {
         "primary-color": "var(--primary-color)",
         "secondary-color": "var(--secondary-color)"
       },
+      spacing: {
+        "15vw":"15vw",
+        
+      }
     },
   },
   plugins: [],

@@ -8,7 +8,9 @@
 @import "base/variables",
         "base/_typography.scss";
 
-@import "components/links",
+@import "components/aside",
+        "components/article",
+        "components/links",
         "components/header", 
         "components/container",
         "components/hero",

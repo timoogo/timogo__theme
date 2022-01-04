@@ -1,0 +1,7 @@
+aside{
+    &[data-vertical="true"]{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        @apply flex w-15vw h-full justify-center items-center uppercase;
+    }
+}
