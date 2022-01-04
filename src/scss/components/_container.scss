@@ -8,17 +8,21 @@ section[data-is_filled=true] {
 
 
 }
-[data-name="our-services"]{
+section[data-name="our-services"]{
     ///temporaire
-      height: 100vh;
-      @apply flex flex-row justify-between;
+      @apply h-100 flex flex-row justify-between;
       & .progress {
-          height: 100% !important;
-          justify-content: center;
-        @apply my-12 #{!important};
+        @apply h-100 justify-center my-12 #{!important};
         }
   }
-#test{
+section[data-name="our-team"]{
     height: 100vh;
-    background-color: white;
+    @apply flex flex-row justify-between;
+    & .progress {
+        height: 100% !important;
+        justify-content: center;
+      @apply my-12 #{!important};
+      }
+
 }
+
