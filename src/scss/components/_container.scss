@@ -10,19 +10,23 @@ section[data-is_filled=true] {
 }
 section[data-name="our-services"]{
     ///temporaire
-      @apply h-100 flex flex-row justify-between;
+      @apply h-screen flex flex-row justify-between;
       & .progress {
-        @apply h-100 justify-center my-12 #{!important};
+        @apply h-screen justify-center my-12 #{!important};
         }
   }
 section[data-name="our-team"]{
-    height: 100vh;
-    @apply flex flex-row justify-between;
+    @apply h-screen flex flex-row justify-between;
+    & .team{
+      @apply flex flex-row flex-wrap;
+      
+    }
+    
+
+   
     & .progress {
-        height: 100% !important;
-        justify-content: center;
-      @apply my-12 #{!important};
+      @apply h-screen justify-center my-12 #{!important};
       }
 
-}
 
+}

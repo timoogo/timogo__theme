@@ -1,129 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./dist/css/app.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0">
+  <title>LOG.IO</title>
+  <link rel="stylesheet" href="./dist/css/app.css">
 </head>
-<body> 
+
+<body>
   <!-- Header starts -->
-    <header>
-      <!-- background color is applied on the nav, also some padding and margin -->
-      <nav>
-    <div class="px-4 mx-auto md:flex md:items-center">
-      <!-- spaces between the logo and the links  -->
-      <div class="flex justify-between items-center">
-        <a href="#" class="font-bold text-xl text-white">FWR</a>
-        <button class="border border-solid border-white px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden" id="navbar-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <ul class="" id="navbar-collapse">
-        <li><a href="#" class="current">Home</a></li>
-        <li><a href="#" class="">About</a></li>
-        <li><a href="#" class="">Features</a></li>
-        <li><a href="#" class="">Pricing</a></li>
-        <li><a href="#" class="">Contact</a></li>
-        <li><a href="#" class="call-to-action">Login</a></li>
-        <li><a href="#" class="call-to-action">Signup</a></li>
-      </ul>
-    </div>
-  </nav>
-
-    </header>
-    
-    <section data-name="hero" data-is_filled="true">
-        <div class="hero text">
-            <div class="max-w-lg md:mx-12 md:order-2">
-                <h1>Enjoy your work</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus congue id feugiat consectetur lacus integer amet. Pharetra cursus porttitor adipiscing quis tempor. Porta nunc, morbi non praesent viverra id. Aliquam elit ac.</p>
-                <div class="mt-6">
-                    <a href="#" class="call-to-action large">Click me</a>
-                </div>
-            </div>
-        </div>
-        <div class="flex image">
-            <img class="object-cover w-full h-full max-w-2xl rounded-md" src="./src/images/hero.png" alt="developper drinking coffee flat design">
-        </div>
-        <!-- PROGRESS -->
-        <div class="progress" data-section_colored="true">
-          <button data-section-name="A" id="current-position"></button>
-          <button data-section-name="B"></button>
-          <button data-section-name="C"></button>
-          <button data-section-name="D"></button>
-        
-          </div>
-        </section>
-        <section data-name="our-services" data-is_filled="false">
-          <aside data-vertical="true">
-            <h2>Our servicess </h2>
-            
-          </aside>
-          <div class="services">
-            <button><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-primary-color" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-            </svg> </button>
-            <article>
-              <header>
-                <img src="https://images.unsplash.com/photo-1638913974071-ad0045d13691?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="bitcoin">
-                <h2 class="title">Dummy title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel nobis, aspernatur officia minima inventore natus sint quidem omnis fuga ipsa nesciunt quasi voluptas! Impedit et animi quia debitis excepturi!</p>
-              </header>
-            </article>
-            <article>
-              <header>
-                <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="bitcoin">
-                <h2 class="title">Dummy title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel nobis, aspernatur officia minima inventore natus sint quidem omnis fuga ipsa nesciunt quasi voluptas! Impedit et animi quia debitis excepturi!</p>
-              </header>
-            </article>
-            <article>
-              <header>
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="bitcoin">
-                <h2 class="title">Dummy title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel nobis, aspernatur officia minima inventore natus sint quidem omnis fuga ipsa nesciunt quasi voluptas! Impedit et animi quia debitis excepturi!</p>
-              </header>
-            </article>
-            <button>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-primary-color" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-            </svg>
+  <header class="main_navigation scrolled">
+    <!-- background color is applied on the nav, also some padding and margin -->
+    <nav>
+      <div class="px-4 mx-auto md:flex md:items-center">
+        <!-- spaces between the logo and the links  -->
+        <div class="flex justify-between items-center">
+          <a href="#" class="logo">LOG.IO</a>
+          <button
+            class="border border-solid border-white px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden"
+            id="navbar-toggle">
+            <i class="fas fa-bars"></i>
           </button>
-          </div>
-                  <!-- PROGRESS -->
-        <div class="progress" data-section_colored="false">
-          <button data-section-name="A" id="current-position"></button>
-          <button data-section-name="B"></button>
-          <button data-section-name="C"></button>
-          <button data-section-name="D"></button>
-        
-          </div>
-        </section>
-        <section data-name="our-team" data-is_filled="false">
-          <aside data-vertical="true">
-            <h2>Our servicess </h2>
-            
-          </aside>
-          <div class="team">
-           <div class="team-member">
-             <img src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80" alt="">
-           </div>
-          </div>
-                  <!-- PROGRESS -->
-        <div class="progress" data-section_colored="false">
-          <button data-section-name="A" id="current-position"></button>
-          <button data-section-name="B"></button>
-          <button data-section-name="C"></button>
-          <button data-section-name="D"></button>
-        
-          </div>
-        </section>
-    </main>
- 
+        </div>
 
-    <script src="./dist/js/app.js"></script>
+        <ul class="" id="navbar-collapse">
+          <li><a href="#" class="current">Home</a></li>
+          <li><a href="#" class="">About</a></li>
+          <li><a href="#" class="">Features</a></li>
+          <li><a href="#" class="">Pricing</a></li>
+          <li><a href="#" class="">Contact</a></li>
+          <li><a href="#" class="call-to-action">Login</a></li>
+          <li><a href="#" class="call-to-action">Signup</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <section class="hero" data-name="hero" data-is_filled="true">
+    <div class="hero text">
+      <div class="max-w-lg md:mx-12 md:order-2">
+        <h1>Enjoy your work</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus congue id feugiat consectetur lacus
+          integer amet. Pharetra cursus porttitor adipiscing quis tempor. Porta nunc, morbi non praesent viverra id.
+          Aliquam elit ac.</p>
+        <div class="mt-6">
+          <a href="#" class="call-to-action large">Click me</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex image">
+      <img class="object-cover w-full h-full max-w-2xl rounded-md" src="./src/images/hero.png"
+        alt="developper drinking coffee flat design">
+    </div>
+    <!-- PROGRESS -->
+    <div class="progress" data-section_colored="true">
+      <button data-section-name="A" id="current-position"></button>
+      <button data-section-name="B"></button>
+      <button data-section-name="C"></button>
+      <button data-section-name="D"></button>
+
+    </div>
+  </section>
+  <section data-name="our-services" data-is_filled="false">
+    <aside data-vertical="true">
+      <h2>Our servicess </h2>
+
+    </aside>
+    <div class="services">
+      <button><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-primary-color" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+            clip-rule="evenodd" />
+        </svg> </button>
+      <article>
+        <header>
+          <img
+            src="https://images.unsplash.com/photo-1638913974071-ad0045d13691?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+            alt="bitcoin">
+          <h2 class="title">Dummy title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel nobis, aspernatur officia minima
+            inventore natus sint quidem omnis fuga ipsa nesciunt quasi voluptas! Impedit et animi quia debitis
+            excepturi!</p>
+        </header>
+      </article>
+      <article>
+        <header>
+          <img
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            alt="bitcoin">
+          <h2 class="title">Dummy title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel nobis, aspernatur officia minima
+            inventore natus sint quidem omnis fuga ipsa nesciunt quasi voluptas! Impedit et animi quia debitis
+            excepturi!</p>
+        </header>
+      </article>
+      <article>
+        <header>
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            alt="bitcoin">
+          <h2 class="title">Dummy title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel nobis, aspernatur officia minima
+            inventore natus sint quidem omnis fuga ipsa nesciunt quasi voluptas! Impedit et animi quia debitis
+            excepturi!</p>
+        </header>
+      </article>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-primary-color" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+    <!-- PROGRESS -->
+    <div class="progress" data-section_colored="false">
+      <button data-section-name="A" id="current-position"></button>
+      <button data-section-name="B"></button>
+      <button data-section-name="C"></button>
+      <button data-section-name="D"></button>
+
+    </div>
+  </section>
+  <section data-name="our-team" data-is_filled="false">
+    <aside data-vertical="true">
+      <h2>Our team </h2>
+
+    </aside>
+    <div class="team">
+    
+        <div class="team_member">
+          <img
+            src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+            alt="bitcoin">
+
+        </div>
+        <div class="team_member">
+          <img
+            src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+            alt="bitcoin">
+
+        </div>
+        <div class="team_member">
+          <img
+            src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+            alt="bitcoin">
+
+        </div>
+        <div class="team_member">
+          <img
+            src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+            alt="bitcoin">
+
+        </div>
+        <div class="team_member">
+          <img
+            src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+            alt="bitcoin">
+
+        </div>
+        <div class="team_member">
+          <img
+            src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+            alt="bitcoin">
+
+        </div>
+        <div class="team_member">
+          <img
+            src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+            alt="bitcoin">
+
+        </div>
+        <div class="team_member">
+          <img
+            src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80"
+            alt="bitcoin">
+
+        </div>
+
+    </div>
+    <!-- PROGRESS -->
+    <div class="progress" data-section_colored="false">
+      <button data-section-name="A" id="current-position"></button>
+      <button data-section-name="B"></button>
+      <button data-section-name="C"></button>
+      <button data-section-name="D"></button>
+
+    </div>
+  </section>
+
+  </main>
+
+
+  <script src="./dist/js/app.js"></script>
+  <script defer src="./dist/js/HeaderBehaviour.js"></script>
+
 </body>
+
 </html>

@@ -780,6 +780,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-between {
   justify-content: space-between;
 }
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
 .rounded {
   border-radius: 0.25rem;
 }
@@ -815,19 +818,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-.font-bold {
-  font-weight: 700;
-}
 .uppercase {
   text-transform: uppercase;
-}
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-gray-600 {
   --tw-text-opacity: 1;
@@ -1043,38 +1035,79 @@ a.call-to-action:hover {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-header nav {
+header.main_navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 50;
+}
+header.main_navigation.scrolled nav {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+header.main_navigation.scrolled nav div div .logo, header.main_navigation.scrolled nav ul li a {
+  color: var(--primary-color);
+}
+header.main_navigation.scrolled nav div div .logo.call-to-action, header.main_navigation.scrolled nav ul li a.call-to-action {
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  background-color: var(--primary-color);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+header.main_navigation.scrolled nav div div .logo.call-to-action:hover, header.main_navigation.scrolled nav ul li a.call-to-action:hover {
+  border-width: 2px;
+  border-color: var(--primary-color);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  color: var(--primary-color);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+header.main_navigation.scrolled nav div div .logo:hover, header.main_navigation.scrolled nav ul li a:hover {
+  background-color: var(--primary-color);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+header.main_navigation nav {
   background-color: var(--primary-color);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-
 @media (min-width: 768px) {
-  header nav {
+  header.main_navigation nav {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 }
-header ul {
+header.main_navigation nav ul {
   margin-top: 0.75rem;
   display: none;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  header ul {
+  header.main_navigation nav ul {
     margin-left: auto;
   }
-  header ul {
+  header.main_navigation nav ul {
     margin-top: 0px;
   }
-  header ul {
+  header.main_navigation nav ul {
     display: flex;
   }
-  header ul {
+  header.main_navigation nav ul {
     flex-direction: row;
   }
 }
-header ul li a.call-to-action {
+header.main_navigation nav ul li a.call-to-action {
   /*
   test
   */
@@ -1122,22 +1155,35 @@ section[data-is_filled=true][data-name=hero] {
   }
 }
 
-[data-name=our-services] {
-  height: 100vh;
+section[data-name=our-services] {
   display: flex;
+  height: 100vh;
   flex-direction: row;
   justify-content: space-between;
 }
-[data-name=our-services] .progress {
-  height: 100% !important;
-  justify-content: center;
+section[data-name=our-services] .progress {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
+  height: 100vh !important;
+  justify-content: center !important;
 }
 
-#test {
+section[data-name=our-team] {
+  display: flex;
   height: 100vh;
-  background-color: white;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section[data-name=our-team] .team {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section[data-name=our-team] .progress {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+  height: 100vh !important;
+  justify-content: center !important;
 }
 
 section[data-name=hero].text {
@@ -1172,6 +1218,11 @@ section[data-name=hero].image {
   section[data-name=hero].image {
     width: 50%;
   }
+}
+
+.team_member {
+  flex: 1 0 21%;
+  padding: 0 1rem;
 }
 
 .progress {

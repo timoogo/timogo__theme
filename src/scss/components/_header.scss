@@ -1,18 +1,38 @@
-header{
-    & nav{
-        @apply bg-primary-color py-2 md:py-4
+header.main_navigation{
+    @apply sticky top-0 z-50;
+    &.scrolled {
+        & nav {
+            @apply bg-white;
+            & div div .logo, ul li a{
+                &.call-to-action {
+                    @apply bg-primary-color border-2 border-white text-white transition-all;
+                    &:hover {
+                        @apply bg-white text-primary-color border-2 border-primary-color  transition-all
+                    }
+                }
+                @apply text-primary-color;
+                &:hover {
+                    @apply bg-primary-color text-white transition-all
+                }
+            }
+
+        }
     }
-    & ul {
-        @apply hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0;
-        & li {
-            & a {
-                &.call-to-action{
-                    /*
-                    test
-                    */
-                    @apply mx-2  #{!important};
+    & nav{
+        @apply bg-primary-color py-2 md:py-4;
+        & ul {
+            @apply hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0;
+            & li {
+                & a {
+                    &.call-to-action{
+                        /*
+                        test
+                        */
+                        @apply mx-2  #{!important};
+                    }
                 }
             }
         }
     }
+   
 }
