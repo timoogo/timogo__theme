@@ -13,6 +13,9 @@ module.exports = {
       spacing: {
         "15vw":"15vw",
         
+      },
+      maxWidth: {
+        '4/5': '80%',
       }
     },
   },

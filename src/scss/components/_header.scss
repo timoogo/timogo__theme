@@ -1,6 +1,7 @@
 header.main_navigation{
     @apply sticky top-0 z-50;
     &.scrolled {
+        box-shadow: 0px 12px 24px rgba(137, 130, 130, 0.17);
         & nav {
             @apply bg-white;
             & div div .logo, ul li a{

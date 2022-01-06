@@ -18,7 +18,7 @@ section[data-name="our-services"]{
 section[data-name="our-team"]{
     @apply h-screen flex flex-row justify-between;
     & .team{
-      @apply flex flex-row flex-wrap;
+      @apply flex flex-row flex-wrap max-w-4/5;
       
     }
     
