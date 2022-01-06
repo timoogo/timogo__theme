@@ -1227,6 +1227,26 @@ section[data-name=hero].image {
 .team_member {
   flex: 1 0 21%;
   padding: 0 1rem;
+  position: relative;
+}
+.team_member span.team_member_name {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 3rem;
+  bottom: 1rem;
+  z-index: 10;
+  padding-top: 18rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 0;
+  transition-duration: 300ms;
+}
+.team_member span.team_member_name:hover {
+  opacity: 1;
 }
 
 .progress {
