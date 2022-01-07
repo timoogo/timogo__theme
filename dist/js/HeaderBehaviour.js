@@ -5,6 +5,17 @@
       rootMargin: "-80px 0px 0px 0px"
     };
     
+
+    const toggleBtn = document.querySelector("#toggle-button");
+    const navList = document.querySelector("#navbar-collapse")
+    
+    toggleBtn.addEventListener("click", ()=>{
+      navList.classList.toggle("active")
+    })
+
+
+
+
     const sectionOneObserver = new IntersectionObserver(function(
       entries,
       sectionOneObserver
@@ -12,12 +23,9 @@
       entries.forEach(entry => {
         if (!entry.isIntersecting) {
           header.classList.add("scrolled");
-          burger.classList.add("scrolled");
-          console.log(burger)
+
         } else {
           header.classList.remove("scrolled");
-           burger.classList.remove("scrolled");
-          console.log("burger rem")
         }
       });
     },

@@ -1,9 +1,8 @@
 .team_member{
-  opacity: 0;
   position: relative;
   & .team_member_name {
     position: absolute;
-    inset: -5vh 25% 25% 0;
+   inset: -5vh 25% 25% 0;
   }
   @media screen and (min-width:1300px) {
     flex: 1 0 21%;

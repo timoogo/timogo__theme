@@ -1,9 +1,6 @@
 section[data-is_filled=true] {
     /// SET THE BACKGROUND COLOR TO THE PRIMARY COLOR 
     background-color: var(--primary-color);
-    & h2{
-        @apply text-secondary-color #{!important}
-          }
     /// APPLYING THE STYLES FOR THE FIRST SECTION. ITS NAMED HERO
     &[data-name="hero"]{
         @apply flex flex-col py-4 mx-auto space-y-12 md:h-full md:py-16 md:flex-row md:items-center md:space-x-6 w-full;
@@ -24,6 +21,7 @@ section[data-name="our-team"]{
       @apply flex flex-row flex-wrap max-w-4/5;
       
     }
+    
 
    
     & .progress {
@@ -33,8 +31,10 @@ section[data-name="our-team"]{
 
 }
 section[data-name="our-gallery"]{
-  @apply mt-12 h-screen flex flex-row justify-between;
- 
+  @apply mt-12 h-screen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
  
   & .progress {
