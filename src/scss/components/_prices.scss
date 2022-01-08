@@ -1,26 +1,48 @@
 .prices {
-  @apply flex justify-around;
+  @apply flex justify-around w-fit;
   & .tab-content{
-    & article[data-tab-content] {
+    flex-basis: 50%;
+    & [data-tab-content] {
       display:none;
+     
     }
     .active[data-tab-content]{
       display:block;
-      @apply block bg-primary-color p-8 w-2/5 text-white;
+      @apply block rounded-t-lg bg-primary-color p-8 text-white;
 
       & header{
         @apply flex justify-between text-3xl pb-12;
        
       }
+      & p {
+        padding-bottom: 30vh !important;
+
+      }
     }
     
   }
   & ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 80%;
     & li{
       display: flex;
-      justify-content: space-evenly;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      justify-content: space-between;
+      padding: 1rem 3rem;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      @apply font-bold;
+      border-radius: 12px;
+      transition: all 500ms;
+      &:hover{
+        background-color: var(--primary-color);
+        color: white;
+        cursor: pointer;
+
+
+      }
     };
   }
 }

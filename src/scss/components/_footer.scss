@@ -1,0 +1,66 @@
+footer{
+    @apply w-full h-screen bg-primary-color text-white;
+    & .newsletter{
+        @apply flex flex-row justify-evenly h-15vw items-center;
+        & h2 {
+            @apply text-3xl uppercase;
+        }
+        & div{
+            & input{
+                @apply
+                py-4 px-12
+                 rounded-sm relative 
+                 placeholder:text-primary-color placeholder:font-bold
+                bg-white appearance-none block pr-14 focus:outline-none ;  
+                
+            }
+            // & svg{
+            //     @apply absolute fill-primary-color;
+            //     inset: 50% 0 auto  0;
+            // }
+        }
+    }
+    & .social-medias {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & ul {
+
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-end;
+            height: 30vh;
+            & li span {
+                display: none;
+            }
+
+        }
+    }
+    & section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        & .group {
+            & h3{
+                font-size: 24px;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+                & li{
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    width: 12rem;
+                }
+            }
+        }
+
+    }
+
+}
