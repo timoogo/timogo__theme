@@ -7,16 +7,20 @@
     .active[data-tab-content]{
       display:block;
       @apply block bg-primary-color p-8 w-2/5 text-white;
-      // background-color: var(--primary-color);
-      // padding: 2rem;
-      // width: 40%;
-      // color: white;
-      // font;
+
       & header{
         @apply flex justify-between text-3xl pb-12;
        
       }
     }
     
+  }
+  & ul {
+    & li{
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    };
   }
 }
