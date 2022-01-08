@@ -1,7 +1,12 @@
 aside{
+    
     &[data-vertical="true"]{
         writing-mode: vertical-rl;
         text-orientation: mixed;
-        @apply flex w-15vw h-full justify-center items-center uppercase;
+        @apply flex w-15vw h-full justify-center text-primary-color  items-center uppercase;
+
     }
+    
+
 }
+section[data-is_filled="true"]aside h2 { color:white;}

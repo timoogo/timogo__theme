@@ -10,13 +10,13 @@ section[data-is_filled=true] {
 }
 section[data-name="our-services"]{
     ///temporaire
-      @apply h-screen flex flex-row justify-between;
+      @apply min-h-screen flex flex-row justify-between;
       & .progress {
         @apply h-screen justify-center my-12 #{!important};
         }
   }
 section[data-name="our-team"]{
-    @apply h-screen flex flex-row justify-between;
+    @apply min-h-screen flex flex-row justify-between;
     & .team{
       @apply flex flex-row flex-wrap max-w-4/5;
       
@@ -31,7 +31,7 @@ section[data-name="our-team"]{
 
 }
 section[data-name="our-gallery"]{
-  @apply mt-12 h-screen;
+  @apply mt-12 min-h-screen;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,6 +42,12 @@ section[data-name="our-gallery"]{
     }
 
 
+}
+section[data-name="our-prices"]{
+  @apply min-h-screen flex flex-row justify-between mt-12;
+  & .progress {
+    @apply h-screen justify-center my-8 #{!important};
+    }
 }
 
 section {

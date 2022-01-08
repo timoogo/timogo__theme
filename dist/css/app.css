@@ -737,6 +737,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .static {
   position: static;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -748,9 +752,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .table {
   display: table;
-}
-.list-item {
-  display: list-item;
 }
 .hidden {
   display: none;
@@ -782,11 +783,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .scroll-smooth {
   scroll-behavior: smooth;
 }
+.rounded {
+  border-radius: 0.25rem;
+}
 .rounded-md {
   border-radius: 0.375rem;
 }
 .border {
   border-width: 1px;
+}
+.border-solid {
+  border-style: solid;
+}
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 .fill-primary-color {
   fill: var(--primary-color);
@@ -795,12 +806,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   -o-object-fit: cover;
      object-fit: cover;
 }
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 .uppercase {
   text-transform: uppercase;
+}
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+.opacity-50 {
+  opacity: 0.5;
 }
 .outline {
   outline-style: solid;
@@ -833,7 +863,6 @@ h2 {
   font-size: 4.5rem;
   line-height: 1;
   font-weight: 800;
-  color: var(--primary-color);
 }
 
 aside[data-vertical=true] {
@@ -847,6 +876,11 @@ aside[data-vertical=true] {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+section[data-is_filled=true] aside h2 {
+  color: white;
 }
 
 .services {
@@ -1018,6 +1052,17 @@ header.main_navigation.scrolled nav {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+@media screen and (max-width: 768px) {
+  header.main_navigation.scrolled nav {
+    height: 80px;
+  }
+  header.main_navigation.scrolled nav .logo {
+    opacity: 0;
+  }
+  header.main_navigation.scrolled nav #navbar-toggle.scrolled {
+    background-color: var(--primary-color);
+  }
+}
 header.main_navigation.scrolled nav div div .logo, header.main_navigation.scrolled nav ul li a {
   color: var(--primary-color);
 }
@@ -1080,6 +1125,11 @@ header.main_navigation nav ul {
     flex-direction: row;
   }
 }
+@media screen and (max-width: 768px) {
+  header.main_navigation nav ul {
+    background: #000;
+  }
+}
 header.main_navigation nav ul li a.call-to-action {
   /*
   test
@@ -1130,7 +1180,7 @@ section[data-is_filled=true][data-name=hero] {
 
 section[data-name=our-services] {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -1143,7 +1193,7 @@ section[data-name=our-services] .progress {
 
 section[data-name=our-team] {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -1162,7 +1212,7 @@ section[data-name=our-team] .progress {
 
 section[data-name=our-gallery] {
   margin-top: 3rem;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1170,6 +1220,20 @@ section[data-name=our-gallery] {
 section[data-name=our-gallery] .progress {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
+  height: 100vh !important;
+  justify-content: center !important;
+}
+
+section[data-name=our-prices] {
+  margin-top: 3rem;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section[data-name=our-prices] .progress {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
   height: 100vh !important;
   justify-content: center !important;
 }
@@ -1338,6 +1402,29 @@ section[data-name=hero].image {
   }
 }
 
+.prices {
+  display: flex;
+  justify-content: space-around;
+}
+.prices .tab-content article[data-tab-content] {
+  display: none;
+}
+.prices .tab-content .active[data-tab-content] {
+  display: block;
+  width: 40%;
+  background-color: var(--primary-color);
+  padding: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.prices .tab-content .active[data-tab-content] header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .progress {
   display: flex;
   flex-direction: column;
@@ -1425,11 +1512,25 @@ section[data-name=hero].image {
     margin-left: 0px;
     margin-right: 0px;
   }
+}
+.hover\:opacity-75:hover {
+  opacity: 0.75;
+}
+@media (min-width: 768px) {
   .md\:order-2 {
     order: 2;
   }
   .md\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+  .md\:flex {
+    display: flex;
+  }
+  .md\:hidden {
+    display: none;
+  }
+  .md\:items-center {
+    align-items: center;
   }
 }
