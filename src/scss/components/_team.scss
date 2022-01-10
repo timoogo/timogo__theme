@@ -1,30 +1,78 @@
-.team_member{
-  position: relative;
-  & .team_member_name {
-    position: absolute;
-   inset: -5vh 25% 25% 0;
+
+
+.team {
+  & .row{
+    @apply relative flex justify-center items-center;
+    & .box {
+      & .imgBox{
+        @apply absolute top-0 left-0 w-full h-full z-10 transition-all duration-500;
+        & img{
+          @apply w-full h-full object-cover resize
+        }
+        & .content{
+          @apply absolute top-0 left-0 w-full h-full p-6 flex justify-center items-end text-center transition duration-500 ease-in-out bg-primary-color;
+        }
+      }
+      @apply relative w-80 h-80 m-8;
+      &:hover {
+        .imgBox {
+          transform: translate(-3.5rem, -3.5rem);
+        }
+        .content {
+          transform: translate(3.5rem, 3.5rem);
+        }
+      }
+    }
   }
-  @media screen and (min-width:1300px) {
-    flex: 1 0 21%;
-    padding:  0 1rem;
-    
   
   
-  & span.team_member_name{
-    @apply 
-          pt-72
-          opacity-0
-          hover:opacity-100
-          duration-300
-          absolute
-          left-12
-          bottom-4
-          inset-0
-          z-10
-          text-4xl
-          text-white
-          font-semibold;
+}
+
+
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  resize: both;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  z-index: 1;
+  align-items: flex-end;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.content h2 {
+  display: block;
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
+
+.content span {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .team .box:hover .content {
+    transform: translate(0, 3.5rem);
   }
+  .team .box:hover .imgBox {
+    transform: translate(0, -3.5rem);
   }
- 
-  }
+}
