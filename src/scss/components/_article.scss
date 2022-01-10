@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @media screen and (max-width:1024px) {
     section[data-name="our-services"]{
@@ -6,6 +7,24 @@
             overflow: hidden;
             justify-content: center;
             flex-direction: row;
+=======
+.services {
+    @apply flex flex-row justify-evenly items-center basis-4/5;
+    & article {
+        @apply max-w-3/10 m-4 h-max box-border shadow-shadow-main;
+        & header{
+            @apply relative;
+            & img{
+                @apply relative w-full max-h-200 object-cover top-0 left-0
+      
+            }
+        }
+        & h2{
+            @apply bg-primary-color text-white text-3xl font-medium -right-3 top-2/5 absolute rounded-md px-3;
+        }
+        & p{
+            @apply mt-8 px-4 pb-20;
+>>>>>>> 462a304926df0edbe976656b266523626254cec3
         }
     }  
 

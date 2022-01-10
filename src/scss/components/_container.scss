@@ -8,7 +8,37 @@ section[data-is_filled=true] {
 
 
 }
+<<<<<<< HEAD
 section[data-is_filled="true"]aside h2 { color:white;}
+=======
+section[data-name="our-services"]{
+    ///temporaire
+      @apply min-h-screen w-full flex flex-row justify-between;
+      & .progress {
+        @apply h-screen justify-center my-12 #{!important};
+        }
+  }
+section[data-name="our-team"]{
+    @apply min-h-screen flex flex-row justify-between;
+    & .team{
+      @apply flex flex-row flex-wrap max-w-4/5;
+      
+    }
+    
+
+   
+    & .progress {
+      @apply h-screen justify-center my-12 #{!important};
+      }
+
+
+}
+section[data-name="our-gallery"]{
+  @apply mt-12 min-h-screen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+>>>>>>> 462a304926df0edbe976656b266523626254cec3
 
  
   @media screen and (min-width:1024px) {
