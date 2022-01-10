@@ -10,7 +10,7 @@ section[data-is_filled=true] {
 }
 section[data-name="our-services"]{
     ///temporaire
-      @apply min-h-screen flex flex-row justify-between;
+      @apply min-h-screen w-full flex flex-row justify-between;
       & .progress {
         @apply h-screen justify-center my-12 #{!important};
         }
@@ -51,5 +51,5 @@ section[data-name="our-prices"]{
 }
 
 section {
-  position: relative;
+  @apply relative;
 }

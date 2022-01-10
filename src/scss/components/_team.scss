@@ -1,30 +1,23 @@
 .team_member{
-  position: relative;
-  & .team_member_name {
-    position: absolute;
-   inset: -5vh 25% 25% 0;
-  }
-  @media screen and (min-width:1300px) {
-    flex: 1 0 21%;
-    padding:  0 1rem;
+  @apply relative h-max;
+  & .information{
+    & .team_member_name {
+      @apply absolute w-full h-0 inset-0 left-1/10;
+      @apply xl:flex-1-0->1/5
     
+      xl:opacity-100
+      xl:hover:opacity-100
+      xl:duration-300
+      xl:absolute
+      xl:inset-0
+      xl:z-10
+      xl:text-4xl
+      xl:text-white
+      xl:font-semibold;
   
+    }
+  }
   
-  & span.team_member_name{
-    @apply 
-          pt-72
-          opacity-0
-          hover:opacity-100
-          duration-300
-          absolute
-          left-12
-          bottom-4
-          inset-0
-          z-10
-          text-4xl
-          text-white
-          font-semibold;
-  }
-  }
+
  
   }

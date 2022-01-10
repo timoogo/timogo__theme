@@ -1,28 +1,16 @@
 .services {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    @apply flex flex-row justify-evenly items-center basis-4/5;
     & article {
-        max-width: 30vw;
-        margin: 1rem;
-        height: max-content;
-        box-sizing: border-box;
-        box-shadow: 0px 12px 24px rgba(137, 130, 130, 0.17);
+        @apply max-w-3/10 m-4 h-max box-border shadow-shadow-main;
         & header{
-            position: relative;
+            @apply relative;
             & img{
-                position: relative;
-                min-width: 330px;
-                width: 100%;
-                max-height: 220px;
-                object-fit:cover;
-                top: 0;
-                left: 0;
+                @apply relative w-full max-h-200 object-cover top-0 left-0
+      
             }
         }
         & h2{
-            @apply bg-primary-color text-white text-3xl font-medium -right-3 bottom-1/2 absolute rounded-md px-3;
+            @apply bg-primary-color text-white text-3xl font-medium -right-3 top-2/5 absolute rounded-md px-3;
         }
         & p{
             @apply mt-8 px-4 pb-20;

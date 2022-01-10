@@ -1,16 +1,16 @@
 header.main_navigation{
     @apply sticky top-0 z-50;
     &.scrolled {
-        box-shadow: 0px 12px 24px rgba(137, 130, 130, 0.17);
+        @apply shadow-shadow-main;
         & nav {
             @apply bg-white;
             @media screen and (max-width:768px) {
-                height: 80px;
+                @apply h-20;
                 & .logo {
-                    opacity: 0;
+                    @apply opacity-0;
                 }
                 & #navbar-toggle.scrolled{
-                    background-color: var(--primary-color);
+                    @apply bg-primary-color;
                 }
             }
             & div div .logo, ul li a{
