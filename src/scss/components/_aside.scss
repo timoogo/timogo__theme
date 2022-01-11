@@ -1,12 +1,18 @@
 aside{
-    
-    &[data-vertical="true"]{
+    @apply flex flex-col text-primary-color uppercase;
+    font-size: 24px;
+    margin-left: 4rem;
+    @media screen and (min-width:1024px) {
+        @apply w-15vw ;
+        &[data-vertical="true"]{
+            margin-left: 0;
+            @apply h-full text-7xl justify-center items-center;
         writing-mode: vertical-rl;
         text-orientation: mixed;
-        @apply flex w-15vw h-full justify-center text-primary-color  items-center uppercase;
-
     }
+}
+        
+
     
 
 }
-section[data-is_filled="true"]aside h2 { color:white;}

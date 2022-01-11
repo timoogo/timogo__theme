@@ -1,31 +1,98 @@
-.services {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    & article {
-        max-width: 30vw;
-        margin: 1rem;
-        height: max-content;
-        box-sizing: border-box;
-        box-shadow: 0px 12px 24px rgba(137, 130, 130, 0.17);
-        & header{
-            position: relative;
-            & img{
-                position: relative;
-                min-width: 330px;
-                width: 100%;
-                max-height: 220px;
-                object-fit:cover;
-                top: 0;
-                left: 0;
+
+@media screen and (max-width:1024px) {
+    section[data-name="our-services"]{
+
+        & article {
+            @apply max-w-3/10 m-4 h-max box-border shadow-shadow-main;
+            & header{
+                @apply relative;
+                & img{
+                    @apply relative w-full max-h-200px object-cover top-0 left-0;
+          
+                }
+                & h2{
+                    @apply bg-primary-color text-white text-3xl font-medium -right-3 top-2/5 absolute rounded-md px-3;
+                }
+                & p{
+                    @apply mt-8 px-4 pb-20;
+                }
             }
         }
-        & h2{
-            @apply bg-primary-color text-white text-3xl font-medium -right-3 bottom-1/2 absolute rounded-md px-3;
+
+        .services {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            flex-direction: row;
         }
-        & p{
-            @apply mt-8 px-4 pb-20;
-        }
+    }  
+
+       
     }
-}
+    @media screen and (min-width:1024px) {
+
+        .services{
+            & .swiper-wrapper{
+                display: flex;
+                flex-direction: row;
+            }
+           & .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+               & img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .services {
+            @apply flex items-center basis-4/5;
+            & article {
+                @apply max-w-3/10 m-4 h-max box-border shadow-shadow-main;
+                & header{
+                    @apply relative;
+                    & img{
+                        @apply relative w-full max-h-200px object-cover top-0 left-0;
+              
+                    }
+                    & h2{
+                        @apply bg-primary-color text-white text-3xl font-medium -right-3 top-2/5 absolute rounded-md px-3;
+                    }
+                    & p{
+                        @apply mt-8 px-4 pb-20;
+                    }
+                }
+            }
+        }    
+    }
+
+   

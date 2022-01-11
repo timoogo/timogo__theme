@@ -1,13 +1,40 @@
 section[data-name="hero"]{
-    &.text {
-        @apply flex flex-col items-center w-full md:flex-row md:w-1/2;
-    
-    
+    & .text {
+        @apply sm:px-24 sm:py-24 
+        md:flex md:flex-col items-center w-full 
+        lg:flex-row md:w-1/2;
+    & h1{
+        @apply sm:word-spacing-10;
     }
-   & p{
+    & p{
         @apply mt-12 text-white leading-6;
     }
-    &.image{
+    & .image{
         @apply flex items-center justify-center w-full h-full md:w-1/2;
+
     }
+    & a.call-to-action.large{
+        @apply md:mt-24;
+    }
+    
+    }
+    
+}
+@media screen and(min-width: 640px) and( max-width: 768px){
+    section[data-name="hero"]{
+        height: 100vh;
+        & .text {
+            position: relative;
+            z-index: 1;
+
+        }
+        & .image{
+            position: absolute;
+            top: 30rem;
+            opacity: 0.75;
+            width: 33%;
+            right: 12rem;
+        }
+    }
+
 }

@@ -20,3 +20,8 @@
         "components/footer",
         "components/progress";
 
+@layer utilities {
+        .word-spacing-10 {
+                word-spacing:10px;
+        }
+}

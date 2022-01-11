@@ -3,53 +3,51 @@ section[data-is_filled=true] {
     background-color: var(--primary-color);
     /// APPLYING THE STYLES FOR THE FIRST SECTION. ITS NAMED HERO
     &[data-name="hero"]{
-        @apply flex flex-col py-4 mx-auto space-y-12 md:h-full md:py-16 md:flex-row md:items-center md:space-x-6 w-full;
+        @apply flex flex-col mx-auto md:h-9/10vh md:flex-row md:items-center md:space-x-6 w-full;
     }
 
 
 }
-section[data-name="our-services"]{
-    ///temporaire
-      @apply min-h-screen flex flex-row justify-between;
-      & .progress {
-        @apply h-screen justify-center my-12 #{!important};
-        }
-  }
-section[data-name="our-team"]{
-    @apply min-h-screen flex flex-row justify-between;
-    & .team{
-      @apply flex flex-row flex-wrap max-w-4/5;
-      
-    }
-    
-
-   
-    & .progress {
-      @apply h-screen justify-center my-12 #{!important};
-      }
-
-
-}
-section[data-name="our-gallery"]{
-  @apply mt-12 min-h-screen;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+section[data-is_filled="true"]aside h2 { color:white;}
 
  
-  & .progress {
-    @apply h-screen justify-center my-12 #{!important};
+  @media screen and (min-width:1024px) {
+    section[data-name="our-services"]{
+      ///temporaire
+        @apply min-h-screen  w-full flex flex-row justify-between;
+       
     }
+    section[data-name="our-team"]{
+      @apply min-h-screen flex;
+      & .team{
+        @apply flex flex-col max-w-4/5;
+        
+      }
+      
+  
+     
+   
+  
+  
+  }
+  section[data-name="our-gallery"]{
+    @apply mt-12 min-h-screen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+   
+  
+  
+  
+  }
+  section[data-name="our-prices"]{
+    @apply min-h-screen flex flex-row justify-between mt-12;
+    
+  }
+  }
 
-
-}
-section[data-name="our-prices"]{
-  @apply min-h-screen flex flex-row justify-between mt-12;
-  & .progress {
-    @apply h-screen justify-center my-8 #{!important};
-    }
-}
 
 section {
-  position: relative;
+  @apply relative;
 }
