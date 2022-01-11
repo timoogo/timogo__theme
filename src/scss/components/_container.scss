@@ -32,10 +32,11 @@ section[data-is_filled=true] {
 
 
     section[data-name="our-gallery"] {
-      @apply mt-12 min-h-screen;
+      @apply mt-24 min-h-screen;
       display: flex;
       justify-content: space-between;
       align-items: center;
+     
 
     }
   }

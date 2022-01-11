@@ -12,7 +12,7 @@
         "components/article",
         "components/links",
         // "components/header", 
-        "components/headerV2", 
+        "components/swiper", 
         "components/container",
         "components/hero",
         "components/gallery",
@@ -22,6 +22,9 @@
         "components/progress";
 
 @layer utilities {
+        .word-spacing-reset{
+                word-spacing:initial;
+        }
         .word-spacing-10 {
                 word-spacing:10px;
         }

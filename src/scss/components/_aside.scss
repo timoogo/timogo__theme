@@ -1,9 +1,9 @@
 aside{
-    @apply flex flex-col text-primary-color uppercase;
-    font-size: 24px;
-    margin-left: 4rem;
     @media screen and (min-width:1024px) {
+        @apply flex flex-col text-primary-color uppercase;
+        margin-left: 4rem;
         @apply w-15vw ;
+        font-size: 24px !important;
         &[data-vertical="true"]{
             margin-left: 0;
             @apply h-full text-7xl justify-center items-center;
@@ -11,8 +11,18 @@ aside{
         text-orientation: mixed;
     }
 }
+@media screen and (max-width:1024px) {
+
+    & h2{
+        font-size: 24px;
+        position: sticky;
+        margin-left: 10vw;
+        @apply text-primary-color;
+        z-index: 55;
+    }
+}
+}
         
 
-    
 
-}
+      

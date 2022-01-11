@@ -4,7 +4,7 @@ section[data-name="hero"]{
         md:flex md:flex-col items-center w-full 
         lg:flex-row md:w-1/2;
     & h1{
-        @apply sm:word-spacing-10;
+        @apply sm:word-spacing-10 md:word-spacing-reset md:text-5xl;
     }
     & p{
         @apply mt-12 text-white leading-6;

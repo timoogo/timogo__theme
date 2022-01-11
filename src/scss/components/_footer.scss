@@ -9,7 +9,7 @@ footer{
             & input{
                 @apply
                 py-4 px-12
-                 rounded-sm relative 
+                 rounded-sm relative border-none
                  placeholder:text-primary-color placeholder:font-bold
                 bg-white appearance-none block pr-14 focus:outline-none ;  
                 

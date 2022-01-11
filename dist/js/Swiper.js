@@ -1,29 +1,34 @@
-var swiper = new Swiper(".ourServices", {
-    cssMode: true,
-    slidesPerView: 3,
+//console.clear();
 
-    spaceBetweenSlides: 30,
+window.onload = () => {
+  const swiperConfig = {
+    cssMode:true,
+    mousewheel: false,
+    mousewheelControl: false,
+    loop: false,
+    parallax: true,
+    slidesPerView: "auto",
+    spaceBetween: 5,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
     breakpoints: {
-      2000:{
+   
+      740: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+      },
+      1024: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 50,
       },
-      // when window width is <= 499px
-      1023: {
-          slidesPerView: 1,
-          
-      },
+    }
+  }
+  const divswipe = new Swiper('.mySwiper', swiperConfig);
 
-      // when window width is <= 999px
-     
-  },
-    mousewheel: true,
-    keyboard: true,
-  });
+};
