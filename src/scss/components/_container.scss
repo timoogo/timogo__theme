@@ -1,53 +1,71 @@
 section[data-is_filled=true] {
-    /// SET THE BACKGROUND COLOR TO THE PRIMARY COLOR 
-    background-color: var(--primary-color);
-    /// APPLYING THE STYLES FOR THE FIRST SECTION. ITS NAMED HERO
-    &[data-name="hero"]{
-        @apply flex flex-col mx-auto md:h-9/10vh md:flex-row md:items-center md:space-x-6 w-full;
-    }
+  /// SET THE BACKGROUND COLOR TO THE PRIMARY COLOR 
+  background-color: var(--primary-color);
+
+  /// APPLYING THE STYLES FOR THE FIRST SECTION. ITS NAMED HERO
+  &[data-name="hero"] {
+    @apply flex flex-col mx-auto md:h-9/10vh md:flex-row md:items-center md:space-x-6 w-full;
+  }
 
 
 }
-section[data-is_filled="true"]aside h2 { color:white;}
 
- 
+@media screen and (min-width:768px) {
+  section[data-name="our-services"] {
+    ///temporaire
+    @apply min-h-screen w-full flex flex-row justify-between;
+
+    & .progress {
+      @apply h-screen justify-center my-12 #{!important};
+    }
+  }
+
+  section[data-name="our-team"] {
+    @apply min-h-screen flex flex-row justify-between;
+
+    & .team {
+      @apply flex flex-row flex-wrap max-w-4/5;
+
+    }
+   
+  }
+
+
+    section[data-name="our-gallery"] {
+      @apply mt-12 min-h-screen;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+  }
   @media screen and (min-width:1024px) {
-    section[data-name="our-services"]{
+    section[data-name="our-services"] {
       ///temporaire
-        @apply min-h-screen  w-full flex flex-row justify-between;
-       
+      @apply min-h-screen w-full flex flex-row justify-between;
+
     }
-    section[data-name="our-team"]{
+
+    section[data-name="our-team"] {
       @apply min-h-screen flex;
-      & .team{
+
+      & .team {
         @apply flex flex-col max-w-4/5;
-        
+
       }
-      
-  
-     
-   
-  
-  
-  }
-  section[data-name="our-gallery"]{
-    @apply mt-12 min-h-screen;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-   
-  
-  
-  
-  }
-  section[data-name="our-prices"]{
-    @apply min-h-screen flex flex-row justify-between mt-12;
-    
-  }
-  }
 
+    }
 
-section {
-  @apply relative;
-}
+    section[data-name="our-gallery"] {
+      @apply mt-12 min-h-screen;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    section[data-name="our-prices"] {
+      @apply min-h-screen flex flex-row justify-between mt-12;
+
+    }
+  }
