@@ -8,7 +8,6 @@ window.onload = () => {
     loop: false,
     parallax: true,
     slidesPerView: "auto",
-    spaceBetween: 5,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -21,7 +20,8 @@ window.onload = () => {
    
       740: {
         slidesPerView: 1,
-        spaceBetween: 40,
+        spaceBetween: 200,
+        loop:true
       },
       1024: {
         slidesPerView: 3,
@@ -32,3 +32,10 @@ window.onload = () => {
   const divswipe = new Swiper('.mySwiper', swiperConfig);
 
 };
+let resizeTimeout;
+window.addEventListener('resize', function(event) {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(function(){
+    window.location.reload();
+  }, 1500);
+});

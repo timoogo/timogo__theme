@@ -1,41 +1,10 @@
 
-@media screen and (max-width:1024px) {
-    section[data-name="our-services"]{
-        & .services .swiper-wrapper{
-            flex-direction: row;
-            display: flex;
-        }
-        
-
-        & article {
-            @apply max-w-3/10 m-4 h-max box-border shadow-shadow-main;
-            & header{
-                @apply relative;
-                & img{
-                    @apply relative w-full max-h-200px object-cover top-0 left-0;
-          
-                }
-                & h2{
-                    @apply bg-primary-color text-white text-3xl font-medium -right-3 top-2/5 absolute rounded-md px-3;
-                }
-                & p{
-                    @apply mt-8 px-4 pb-20;
-                }
-            }
-        }
-
-        .services {
-            display: flex;
-            overflow: hidden;
-            justify-content: center;
-            flex-direction: row;
-        }
-    }  
-
+@media screen and (max-width:1023px) {
        
     }
+    
     @media screen and (min-width:1024px) {
-
+     
         .services{
             & .swiper-wrapper{
                 display: flex;

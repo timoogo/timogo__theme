@@ -1,6 +1,6 @@
 .team {
   & .row{
-    @apply relative flex justify-center items-center;
+    @apply lg:w-full relative flex justify-start items-center;
     & .box {
       & .imgBox{
         @apply absolute top-0 left-0 w-full h-full z-10 transition-all duration-500;
@@ -15,9 +15,12 @@
       &:hover {
         .imgBox {
           transform: translate(-3.5rem, -3.5rem);
+          
         }
         .content {
           transform: translate(3.5rem, 3.5rem);
+          z-index: 2; /* A hovered expander is always on top */
+           transition: transform 400ms 0ms, z-index 0ms 0ms
         }
       }
     }

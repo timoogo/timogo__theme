@@ -1,51 +1,15 @@
-header.main_navigation{
-    @apply sticky top-0 z-50;
-    &.scrolled {
-        @apply shadow-shadow-main;
-        & nav {
-            @apply bg-white;
-            @media screen and (max-width:768px) {
-                @apply h-20;
-                & .logo {
-                    @apply opacity-0;
-                }
-                & #navbar-toggle.scrolled{
-                    @apply bg-primary-color;
-                }
-            }
-            & div div .logo, ul li a{
-                &.call-to-action {
-                    @apply bg-primary-color border-2 border-white text-white transition-all;
-                    &:hover {
-                        @apply bg-white text-primary-color border-2 border-primary-color  transition-all
-                    }
-                }
-                @apply text-primary-color;
-                &:hover {
-                    @apply bg-primary-color text-white transition-all
-                }
-            }
 
-        }
-    }
-    & nav{
-        @apply bg-primary-color py-2 md:py-4;
-        & ul {
-            @apply hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0;
-            @media screen and(max-width:768px) {
-                background: #000;
-            }
-            & li {
-                & a {
-                    &.call-to-action{
-                        /*
-                        test
-                        */
-                        @apply mx-2  #{!important};
-                    }
-                }
+@media screen and( min-width:740px) and (max-width:1023px) {
+    header {
+        nav {
+            a {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 62%;
+
             }
         }
     }
-   
 }

@@ -1,20 +1,20 @@
 .progress {
-    @apply hidden md:mx-auto md:my-0 md:flex md:flex-col md:justify-evenly md:h-9/10vh md:py-52;
+    @apply hidden md:mx-auto md:my-0 md:flex md:flex-col md:justify-evenly md:h-9/10vh md:py-52 ;
 
     &[data-section_colored="true"]{
         & a{
-            @apply w-7 h-7 rounded-full opacity-50 bg-white;
+            @apply transition-opacity duration-1000 w-7 h-7 rounded-full opacity-50 bg-white ;
             &#current-position,&:hover {
-                @apply opacity-100;
+             
                opacity: 1;
             }
         }
     }
     &[data-section_colored="false"]{
         & a{
-            @apply w-7 h-7 rounded-full opacity-50 bg-primary-color;
+            @apply transition-opacity duration-1000 w-7 h-7 rounded-full opacity-50 bg-primary-color;
             &#current-position,&:hover {
-                @apply opacity-100;
+             
                opacity: 1;
             }
         }
