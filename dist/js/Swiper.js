@@ -33,14 +33,11 @@ window.addEventListener('resize', function(event) {
   }
   const swiperTeamConfig = {
     cssMode:true,
-    mousewheel: false,
-    mousewheelControl: false,
-    loop: false,
-    parallax: true,
     slidesPerView: 3,
-    grid:{
-      rows:2
+    grid: {
+      rows: 2,
     },
+    spaceBetween: 30,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

@@ -1706,23 +1706,31 @@ a.call-to-action.large{
 }
 
 @media screen and (min-width: 1023px) {
+  #our-team aside {
+    align-items: center !important;
+    height: 100vh;
+  }
   #our-team .swiper-wrapper {
+    height: 100vh;
     flex-wrap: wrap;
   }
   #our-team .swiper-wrapper .swiper-slide {
     flex-shrink: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: -webkit-min-content !important;
+    height: -moz-min-content !important;
+    height: min-content !important;
     position: relative;
     transition-property: transform;
     flex-basis: 33%;
-    padding: 1rem;
+    padding: 0;
+    margin-right: 0 !important;
   }
   #our-team .swiper-wrapper .swiper-slide .box {
     position: relative;
     width: 15rem;
     height: 15rem;
-    margin: 4rem;
+    margin: 1rem;
   }
   #our-team .swiper-wrapper .swiper-slide .box:hover .imgBox {
     transform: translate(-3, -3);
@@ -2353,6 +2361,35 @@ section[data-name=hero] .text .image{
   color: white;
 }
 
+@media screen and (max-width: 900px) {
+  .prices {
+    flex-direction: column-reverse !important;
+  }
+  .prices ul {
+    -ms-writing-mode: tb-lr;
+        writing-mode: vertical-lr;
+    height: 40%;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: flex-end;
+  }
+  .prices ul li {
+    transition: all 500ms ease-in-out;
+  }
+  .prices ul li:not(.active) {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    margin: 0 -64% -2% 0;
+  }
+  .prices ul li.active {
+    height: 80%;
+  }
+
+  .progress {
+    display: none !important;
+  }
+}
 footer{
   position: relative;
   height: 100vh;
@@ -2426,9 +2463,26 @@ footer .social-medias ul li span{
 }
 footer section{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+}
+@media (min-width: 768px){
+  footer section{
+    flex-direction: column;
+  }
+  footer section{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (min-width: 1024px){
+  footer section{
+    flex-direction: row;
+  }
+  footer section{
+    align-items: center;
+  }
+  footer section{
+    justify-content: space-around;
+  }
 }
 footer section .group{
   display: flex;
@@ -2448,11 +2502,53 @@ footer section .group ul li{
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media (min-width: 768px){
+  footer section .group ul li{
+    width: 100%;
+  }
+}
+@media (min-width: 1024px){
+  footer section .group ul li{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 
+@media screen and (max-width: 900px) {
+  footer {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  footer .newsletter {
+    flex-direction: column;
+    flex-basis: 100%;
+    padding: 3rem 0;
+  }
+  footer .newsletter div label input {
+    margin: 3rem 0;
+  }
+  footer .links {
+    flex-direction: column;
+    height: 120vh;
+  }
+  footer .links .group h3 {
+    padding: 1rem 0;
+  }
+  footer .links .group ul li {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  footer .social-medias {
+    bottom: 0;
+    margin: -1rem 0;
+  }
+}
 .progress{
   display: none;
 }
-
 @media (min-width: 768px){
   .progress{
     margin-left: auto;

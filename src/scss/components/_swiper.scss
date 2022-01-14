@@ -59,21 +59,27 @@
   }
 @media screen and (min-width:1023px) {
   #our-team {
+    & aside {
+      align-items: center !important;
+      height: 100vh;
+    }
     & .swiper-wrapper{
+      height: 100vh;
       flex-wrap: wrap;
       & .swiper-slide {
         flex-shrink: 0;
-        width: 100%;
-        height: 100%;
+        width: 100% !important;
+        height: min-content !important;
         position: relative;
         transition-property: transform;
         flex-basis: 33%;
-        padding: 1rem;
+        padding: 0;
+        margin-right: 0 !important;
         .box {
           position: relative;
           width: 15rem;
           height: 15rem;
-          margin: 4rem;
+          margin: 1rem;
           &:hover {
             .imgBox {
               transform: translate(-3, -3);

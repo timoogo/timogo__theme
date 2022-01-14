@@ -34,6 +34,29 @@
 
 @media screen and (max-width:900px) {
   .prices{
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
+
+    ul {
+      writing-mode: vertical-lr;
+      height: 40%;
+      justify-content: space-evenly;
+      width: 100%;
+      align-items: flex-end;
+      & li {
+        transition: all 500ms ease-in-out;
+
+      }
+      & li:not(.active){
+        height: max-content;
+        margin: 0 -64% -2% 0;
+      }
+      & li.active{
+        height: 80%;
+      }
+
+    }
+  }
+  .progress {
+    display: none !important;
   }
 }

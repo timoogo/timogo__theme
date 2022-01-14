@@ -32,7 +32,8 @@ footer{
         }
     }
     & section {
-        @apply flex flex-row items-center justify-around;
+        @apply flex lg:flex-row lg:items-center lg:justify-around
+                    md:flex-col md:py-12    ;
       
         & .group {
             @apply flex flex-col items-center;
@@ -43,11 +44,44 @@ footer{
             & ul {
                 @apply flex flex-col;
                 & li{
-                    @apply py-4 w-48;
+                    @apply py-4 w-48 md:w-full lg:w-fit;
                 }
             }
         }
 
     }
 
+}
+@media screen and (max-width:900px) {
+  footer{
+      height: max-content;
+    .newsletter {
+        flex-direction: column;
+        flex-basis: 100%;
+        padding: 3rem 0;
+        div {
+            label {
+                input{
+                    margin: 3rem 0;
+                }
+            }
+        }
+    }
+    .links {
+        flex-direction: column;
+        height: 120vh;
+        & .group {
+            & h3 {
+                padding: 1rem 0;
+            }
+            & ul li {
+                width: max-content;
+            }
+        }
+    }
+    .social-medias{
+        bottom: 0;
+        margin: -1rem 0;
+    }
+  }
 }
