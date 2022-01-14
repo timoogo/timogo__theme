@@ -3,7 +3,7 @@ window.addEventListener('resize', function(event) {
   location.reload();
 }, true);
 
-  const swiperConfig = {
+  const swiperServicesConfig = {
     cssMode:true,
     mousewheel: false,
     mousewheelControl: false,
@@ -31,7 +31,40 @@ window.addEventListener('resize', function(event) {
       },
     }
   }
-  const divswipe = new Swiper('.mySwiper', swiperConfig);
+  const swiperTeamConfig = {
+    cssMode:true,
+    mousewheel: false,
+    mousewheelControl: false,
+    loop: false,
+    parallax: true,
+    slidesPerView: 3,
+    grid:{
+      rows:2
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+   
+      740: {
+        slidesPerView: 1,
+        spaceBetween: 200,
+        loop:true
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    }
+  }
+  const servicesswipe = new Swiper('.servicesswipe', swiperServicesConfig);
+
+  const teamSwipe = new Swiper('.teamswipe', swiperTeamConfig);
 
 
 

@@ -19,7 +19,7 @@
         }
       }
     }
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) and (max-width:900px){
   #our-services {
     height: 125vh;
     .swiper{
@@ -44,6 +44,93 @@
 
 }
 
+  }
+
+}
+  .swiper-wrapper .box:hover .content {
+    transform: translate(0rem, 10rem);
+    position: relative;
+    top: 0;
+  }
+  .swiper-wrapper .box:hover .imgBox {
+    transform: translate(0rem, 0rem);
+    z-index: 100;
+
+  }
+@media screen and (min-width:1023px) {
+  #our-team {
+    & .swiper-wrapper{
+      flex-wrap: wrap;
+      & .swiper-slide {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition-property: transform;
+        flex-basis: 33%;
+        padding: 1rem;
+        .box {
+          position: relative;
+          width: 15rem;
+          height: 15rem;
+          margin: 4rem;
+          &:hover {
+            .imgBox {
+              transform: translate(-3, -3);
+            }
+            .content {
+              transform: translate(3, 3);
+            }
+          } 
+
+
+          .imgBox{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            transition: all 0.5s ease-in-out;
+            img {
+              width: 15rem;
+              height: 15rem;
+              object-fit: cover;
+              resize: both;
+            }
+          }
+          .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            background-color: var(--primary-color);
+            z-index: 1;
+            align-items: flex-end;
+            text-align: center;
+            transition: 0.5s ease-in-out;
+            h2 {
+              display: block;
+              font-size: 1.5rem;
+              font-weight: 500;
+              line-height: 2rem;
+              letter-spacing: 1px;
+            }
+            span {
+              
+              font-size: 1.2rem;
+              font-weight: 300;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -109,5 +196,15 @@
     aside{
         flex-basis: 25%;
     }
+    }
+    #our-team {
+      height: 125vh;
+      .swiper{
+        overflow: hidden;
+  
+        
+      }
+     
+  
     }
 }

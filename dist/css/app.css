@@ -1674,7 +1674,7 @@ a.call-to-action.large{
     width: 185%;
   }
 }
-@media screen and (min-width: 640px) and (max-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 640px) and (max-width: 768px) and (min-width: 768px) and (max-width: 900px) {
   #our-services #our-services {
     height: 125vh;
   }
@@ -1692,6 +1692,87 @@ a.call-to-action.large{
   }
   #our-services #our-services .swiper .swiper-wrapper .swiper-slide article header {
     width: 185%;
+  }
+}
+.swiper-wrapper .box:hover .content {
+  transform: translate(0rem, 10rem);
+  position: relative;
+  top: 0;
+}
+
+.swiper-wrapper .box:hover .imgBox {
+  transform: translate(0rem, 0rem);
+  z-index: 100;
+}
+
+@media screen and (min-width: 1023px) {
+  #our-team .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+  #our-team .swiper-wrapper .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    flex-basis: 33%;
+    padding: 1rem;
+  }
+  #our-team .swiper-wrapper .swiper-slide .box {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    margin: 4rem;
+  }
+  #our-team .swiper-wrapper .swiper-slide .box:hover .imgBox {
+    transform: translate(-3, -3);
+  }
+  #our-team .swiper-wrapper .swiper-slide .box:hover .content {
+    transform: translate(3, 3);
+  }
+  #our-team .swiper-wrapper .swiper-slide .box .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+  }
+  #our-team .swiper-wrapper .swiper-slide .box .imgBox img {
+    width: 15rem;
+    height: 15rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    resize: both;
+  }
+  #our-team .swiper-wrapper .swiper-slide .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color: var(--primary-color);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+  }
+  #our-team .swiper-wrapper .swiper-slide .box .content h2 {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 1px;
+  }
+  #our-team .swiper-wrapper .swiper-slide .box .content span {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1740,6 +1821,13 @@ a.call-to-action.large{
   }
   #our-services aside {
     flex-basis: 25%;
+  }
+
+  #our-team {
+    height: 125vh;
+  }
+  #our-team .swiper {
+    overflow: hidden;
   }
 }
 section[data-is_filled=true] {
