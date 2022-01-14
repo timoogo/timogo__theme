@@ -7,3 +7,8 @@
   "author": "",
   "license": "ISC",
 ```
+## instalation 
+```bash
+npm install
+npm run build
+```
